@@ -1,0 +1,14 @@
+--------FALTA FAZER
+tela de produtos/produto unico
+coprytgh da pagina
+carrinho
+all back end
+
+
+-----BUG
+produtos.html
+sobre.html
+ajustar o mobile
+
+
+
