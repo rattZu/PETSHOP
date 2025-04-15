@@ -1,5 +1,4 @@
 --------FALTA FAZER
-tela de produtos/produto unico
 coprytgh da pagina
 carrinho
 all back end
@@ -9,6 +8,6 @@ all back end
 produtos.html
 sobre.html
 ajustar o mobile
-
+navbar mobile
 
 
