@@ -1,12 +1,11 @@
 --------FALTA FAZER
 coprytgh da pagina
-carrinho
 all back end
 
 
 -----BUG
-produtos.html
-sobre.html
+produtos.html (talvez deletar a pagina)
+sobre.html (talvez deletar a pagina)
 ajustar o mobile
 navbar mobile
 
