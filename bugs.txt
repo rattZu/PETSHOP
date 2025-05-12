@@ -1,12 +1,91 @@
 --------FALTA FAZER
 coprytgh da pagina
-all back end
+back do login
+back do carrinho
+link direto dos produto
+bugs visuais
+css do carrinho
 
 
 -----BUG
-produtos.html (talvez deletar a pagina)
-sobre.html (talvez deletar a pagina)
 ajustar o mobile
 navbar mobile
+login
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Conceitos Básicos
+O que é Engenharia de Software
+
+Qualidade de software
+
+Ciclo de vida do software
+
+2. Modelos de Desenvolvimento de Software
+Cascata (Waterfall)
+
+Incremental
+
+Espiral
+
+Prototipação
+
+Metodologias Ágeis (Scrum, XP)
+
+3. Requisitos de Software
+Requisitos funcionais e não-funcionais
+
+Técnicas de levantamento (entrevistas, observações)
+
+Documento de Requisitos
+
+4. Modelagem com UML
+Diagrama de casos de uso
+
+Diagrama de classes
+
+Diagrama de sequência
+
+Diagrama de atividades
+
+5. Projeto e Arquitetura de Software
+Arquitetura em camadas (ex: MVC)
+
+Padrões de projeto (Singleton, Factory, etc.)
+
+Coesão e acoplamento
+
+6. Teste de Software
+Tipos de teste: unidade, integração, sistema, aceitação
+
+Teste caixa-preta vs. caixa-branca
+
+7. Manutenção de Software
+Tipos de manutenção: corretiva, adaptativa, evolutiva, preventiva
+
+8. Gerência de Projetos
+Cronograma e estimativas
+
+Gráfico de Gantt
+
+Riscos e documentação
+
+9. Metodologias Ágeis
+SCRUM (papéis, cerimônias, artefatos)
+
+Kanban
+
+Diferenças entre Ágil e Cascata
+
 
 
