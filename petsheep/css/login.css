@@ -1,0 +1,366 @@
+:root {
+    --primary-color: #da8f20; /* Cor primária */
+    --secondary-color: #da7420; /* Cor secundária  */
+    --black: #000000; /* Preto */
+    --white: #ffffff; /* Branco */
+    --gray: #efefef; /* Cinza claro para fundos */
+    --gray-2: #757575; /* Cinza escuro para textos e ícones */
+    --facebook-color: #4267b2; /* Cor do botão do Facebook */
+  }
+  
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+  /* Importa a fonte  */
+  
+  * {
+    /* Estilo global para todos os elementos */
+    font-family: "Poppins", sans-serif; /* Define a fonte  */
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove preenchimentos */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total */
+  }
+  
+  html,
+  body {
+    /* Define altura total da página e oculta o scroll */
+    height: 100vh;
+    overflow: hidden; /* Impede o scroll vertical */
+  }
+  
+  .container {
+    /* box */
+    position: relative;
+    min-height: 100vh; /* Altura mínima igual à altura da janela */
+    overflow: visible; /* Permite que o conteúdo transborde */
+  }
+  
+  .row {
+    /* Define layout flexível para as colunas */
+    display: flex; /* Ativa o layout flexível */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    height: 100vh; /* Altura total da janela */
+  }
+  
+  .col {
+    /* Define largura de 50% para cada coluna */
+    width: 50%;
+  }
+  
+  .align-items-center {
+    /* Centraliza o conteúdo vertical e horizontalmente */
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Alinha horizontalmente */
+    text-align: center; /* Centraliza o texto */
+  }
+  
+  .form-wrapper {
+    /* Define o tamanho máximo do formulário */
+    width: 100%;
+    max-width: 28rem; /* Largura máxima de 28rem */
+  }
+  
+  .form {
+    /* Estilo do formulário */
+    padding: 1rem; /* Espaçamento interno */
+    background-color: var(--white); /* Fundo branco */
+    border-radius: 1.5rem; /* Bordas arredondadas */
+    width: 100%; /* Ocupa toda a largura disponível */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35); /* Sombra */
+    transform: scale(0); /* Inicialmente invisível */
+    transition: 0.3s ease-in-out 0s; /* Transição suave */
+  }
+  
+  .input-group {
+    /* Grupo de entrada do formulário */
+    position: relative;
+    width: 100%; /* Ocupa toda a largura disponível */
+    margin: 1rem 0; /* Margem vertical */
+  }
+  
+  .input-group i {
+    /* Ícones dentro do campo de entrada */
+    position: absolute; /* Posicionamento absoluto */
+    top: 50%; /* Centraliza verticalmente */
+    left: 1rem; /* Espaçamento à esquerda */
+    transform: translateY(-50%); /* Ajusta o alinhamento vertical */
+    font-size: 1.4rem; /* Tamanho do ícone */
+    color: var(--gray-2); /* Cor cinza escuro */
+  }
+  
+  .input-group input {
+    /* Estilo dos campos de entrada */
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 1rem 3rem; /* Espaçamento interno */
+    font-size: 1rem; /* Tamanho da fonte */
+    background-color: var(--gray); /* Fundo cinza claro */
+    border-radius: 0.5rem; /* Bordas arredondadas */
+    border: 0.125rem solid var(--white); /* Borda branca */
+    outline: none; /* Remove o contorno padrão */
+  }
+  
+  .input-group input:focus {
+    /* Estilo ao focar no campo de entrada */
+    border: 0.125rem solid var(--primary-color); /* Borda com cor primária */
+  }
+  
+  .form button {
+    /* Botão do formulário */
+    cursor: pointer; /* Mostra o cursor de clique */
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 0.6rem 0; /* Espaçamento interno */
+    border-radius: 0.5rem; /* Bordas arredondadas */
+    border: none; /* Remove bordas */
+    background-color: var(--primary-color); /* Fundo com cor primária */
+    color: var(--white); /* Texto branco */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    outline: none; /* Remove o contorno padrão */
+  }
+  
+  .form p {
+    /* Texto adicional no formulário */
+    margin: 1rem 0; /* Margem vertical */
+    font-size: 0.7rem; /* Tamanho da fonte */
+  }
+  
+  .flex-col {
+    /* Define layout em coluna */
+    flex-direction: column;
+  }
+  
+  .pointer {
+    /* Adiciona o cursor de clique */
+    cursor: pointer;
+  }
+  
+  .container.sign-in .form.sign-in,
+  .container.sign-in .social-list.sign-in,
+  .container.sign-in .social-list.sign-in > div,
+  .container.sign-up .form.sign-up,
+  .container.sign-up .social-list.sign-up,
+  .container.sign-up .social-list.sign-up > div {
+    /* Torna os formulários e botões sociais visíveis ao alternar entre "sign-in" e "sign-up" */
+    transform: scale(1);
+  }
+  
+  .content-row {
+    /* Estilo para a linha de conteúdo */
+    position: fixed;
+    top: -3%; /* Posiciona ligeiramente acima do topo */
+    left: -1%; /* Posiciona ligeiramente à esquerda */
+    pointer-events: none; /* Impede interação com o mouse */
+    z-index: 6; /* Garante que fique acima de outros elementos */
+    width: 100%; /* Ocupa toda a largura */
+  }
+  
+  .text {
+    /* Estilo para o texto */
+    margin: 4rem; /* Margem ao redor do texto */
+    color: var(--white); /* Cor branca */
+  }
+  
+  .text h2 {
+    /* Estilo para o título */
+    font-size: 3.5rem; /* Tamanho grande do título */
+    font-weight: 800; /* Peso da fonte */
+    margin: 2rem 0; /* Margem vertical */
+    transition: 1s ease-in-out; /* Transição suave */
+  }
+  
+  .text p {
+    /* Estilo para o parágrafo */
+    font-weight: 600; /* Peso da fonte */
+    transition: 1s ease-in-out 0.2s; /* Transição suave com atraso */
+  }
+  
+  .img img {
+    /* Estilo para as imagens */
+    width: 30vw; /* Largura relativa à largura da janela */
+    transition: 1s ease-in-out 0.4s; /* Transição suave com atraso */
+  }
+  
+  .text.sign-in h2,
+  .text.sign-in p,
+  .img.sign-in img {
+    /* Move os elementos para fora da tela à esquerda no estado "sign-in" */
+    transform: translateX(-250%);
+  }
+  
+  .text.sign-up h2,
+  .text.sign-up p,
+  .img.sign-up img {
+    /* Move os elementos para fora da tela à direita no estado "sign-up" */
+    transform: translateX(250%);
+  }
+  
+  .container.sign-in .text.sign-in h2,
+  .container.sign-in .text.sign-in p,
+  .container.sign-in .img.sign-in img,
+  .container.sign-up .text.sign-up h2,
+  .container.sign-up .text.sign-up p,
+  .container.sign-up .img.sign-up img {
+    /* Retorna os elementos para a posição original ao alternar entre "sign-in" e "sign-up" */
+    transform: translateX(0);
+  }
+  
+  .container::before {
+    /* Fundo gradiente animado */
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh; /* Altura total da janela */
+    width: 300vw; /* Largura muito maior que a janela para criar o efeito de transição */
+    transform: translate(35%, 0); /* Posição inicial do gradiente */
+    background-image: linear-gradient(
+      -45deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%
+    );
+    transition: 1s ease-in-out; /* Transição suave */
+    z-index: 6; /* Garante que fique acima de outros elementos */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35); /* Sombra */
+  }
+  
+  .container.sign-in::before {
+    /* Ajusta o fundo ao alternar para "sign-in" */
+    transform: translate(0, 0);
+    right: 50%;
+  }
+  
+  .container.sign-up::before {
+    /* Ajusta o fundo ao alternar para "sign-up" */
+    transform: translate(100%, 0);
+    right: 50%;
+  }
+  
+  @media only screen and (max-width: 425px) {
+    /* Estilos para telas pequenas */
+    .container::before,
+    .container.sign-in::before,
+    .container.sign-up::before {
+      height: 100vh;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: 0;
+      z-index: 0;
+      transform: none;
+      right: 0;
+    }
+  
+    .container.sign-in .col.sign-in,
+    .container.sign-up .col.sign-up {
+      transform: translateY(0);
+    }
+  
+    .content-row {
+      align-items: flex-start !important;
+    }
+  
+    .content-row .col {
+      transform: translateY(0);
+      background-color: unset;
+    }
+  
+    .col {
+      width: 100%;
+      position: absolute;
+      padding: 2rem;
+      background-color: var(--white);
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;
+      transform: translateY(100%);
+      transition: 1s ease-in-out;
+    }
+  
+    .row {
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+  
+    .form,
+    .social-list {
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .text {
+      margin: 0;
+    }
+  
+    .text p {
+      display: none;
+    }
+  
+    .text h2 {
+      margin: 0.5rem;
+      font-size: 2rem;
+    }
+  }
+  
+  :root {
+    /* Variáveis globais para cores */
+    --primary: #da8f20;
+    --secondary: #ffd33c;
+    --light: #f3f3f3;
+    --dark: #212121;
+  }
+  
+  [class^="flaticon-"]:before,
+  [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after,
+  [class*=" flaticon-"]:after {
+    /* Estilo para ícones da biblioteca Flaticon */
+    font-size: inherit;
+    margin-left: 0;
+  }
+  
+  .btn {
+    /* Estilo base para botões */
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.5s;
+  }
+  
+  .btn-primary {
+    /* Botão com estilo primário */
+    color: rgba(255, 255, 255, 1);
+  }
+  
+  .btn-square {
+    /* Botão quadrado */
+    width: 36px;
+    height: 36px;
+  }
+  
+  .btn-sm-square {
+    /* Botão quadrado pequeno */
+    width: 28px;
+    height: 28px;
+  }
+  
+  .btn-lg-square {
+    /* Botão quadrado grande */
+    width: 46px;
+    height: 46px;
+  }
+  
+  .btn-square,
+  .btn-sm-square,
+  .btn-lg-square {
+    /* Centraliza o conteúdo dos botões quadrados */
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+  
+  .back-to-top {
+    /* Botão "voltar ao topo" */
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 0;
+    border-radius: 0;
+    z-index: 99;
+  }
+  

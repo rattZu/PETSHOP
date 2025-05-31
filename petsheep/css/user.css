@@ -1,0 +1,95 @@
+/* Reset básico */
+* {
+  margin: 0px;
+  padding: 0.5px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-link {
+  font-size: 16px;
+}
+
+/* Container principal */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 100px;
+}
+
+/* Card de informações do usuário */
+.card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card-body .btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.card-body .btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.card-body .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .card-header {
+    font-size: 18px;
+  }
+
+  .card-body p {
+    font-size: 14px;
+  }
+
+  .card-body .btn {
+    font-size: 14px;
+  }
+}

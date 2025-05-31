@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="img/giaicon.jpg" rel="icon">
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/carrinho.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+    <script src="js/carinho.js" async></script>
+
+    <title>Carrinho</title>
+  </head>
+  <body>
+      <!-- Barra de navegação -->
+      <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+        <a href="index.html" class="navbar-brand ms-lg-5">
+          <h1 class="m-0 text-uppercase text-dark">
+          </h1>
+        </a>
+          <h1 class="m-0 text-uppercase text-dark">
+            <i class="flaticon-dog fs-1 text-primary me-3"></i>😂👉🧠🔥
+          </h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto py-0">
+            <a href="index.html" class="nav-item nav-link active">Início</a>
+            <a href="contato.html" class="nav-item nav-link">Contato</a>
+            <a href="carrinho.html" class="nav-item nav-link">Produtos</a>
+            <a href="user.php" class="nav-item nav-link">Usuario</a>
+            <div class="nav-item dropdown">
+              <div class="dropdown-menu m-0"></div>
+            </div>
+            <a href="login.php" class="nav-item nav-link nav-contato.html bg-primary text-white px-5 ms-lg-5">Login <i class="bi bi-arrow-right"></i>
+            </a>
+      </nav>
+      <hr>
+      <header class="hero-header">
+        <div class="container py-5">
+          <div class="row justify-content-start">
+            <div class="col-lg-6 text-center text-lg-start">
+              <h1 class="display-5 text-uppercase mb-0">Carrinho de Compras</h1>
+            </div>
+          </div>
+        </div>
+       
+    </header>
+
+    <main class="main-section">
+      <section class="container normal-section">
+        <h2 class="section-title">Produtos</h2>
+
+        <div class="products-container">
+          <div class="movie-product">
+            <strong class="product-title">pedigree vital pro 10kg</strong>
+            <!-- <br> -->
+            <img src="img/product-1.png" alt="product-1 1" class="product-image">
+            <div class="product-price-container">
+              <span class="product-price">R$165,00</span>
+              <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+              
+            </div>
+          </div>
+
+          <div class="movie-product">
+            <strong class="product-title">Ração Megazoo para Hamster 360g</strong>
+            <!-- <br> -->
+            <img src="img/hampter.png" alt="Poster 2" class="product-image">
+            <div class="product-price-container">
+              <span class="product-price">R$28,00</span>
+              <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+            </div>
+          </div>
+  
+          <div class="movie-product">
+            <strong class="product-title">Wiskas (sabor carne) 10kg</strong>
+            <!-- <br> -->
+            <img src="img/product-2.png" alt="Poster 3" class="product-image">
+            <div class="product-price-container">
+              <span class="product-price">R$140,00</span>
+              <button type="button" class="button-hover-background">Adicionar ao carrinho</button>
+            </div>
+          </div>
+  
+         
+
+      <section class="container normal-section">
+        <h2 class="section-title">Carrinho</h2>
+
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th class="table-head-item first-col">Item</th>
+              <th class="table-head-item second-col">Preço</th>
+              <th class="table-head-item third-col">Quantidade</th>
+            </tr>
+          </thead>
+
+          <tbody>
+             <tr class="cart-product">
+              <td class="product-identification">
+                <img src="img/giaicon.jpg" alt="Miniatura" class="cart-product-image">
+                <strong class="cart-product-title">teste</strong>
+              </td>
+              <td>
+                <span class="cart-product-price">R$69,69</span>
+              </td>
+              <td>
+                <input type="number" value="2" min="0" class="product-qtd-input">
+                <button type="button" class="remove-product-button">Remover</button>
+              </td>
+            </tr>
+            
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <td colspan="3" class="cart-total-container">
+                <strong>Total</strong>
+                <span>R$0,00</span>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <button type="button" class="purchase-button">Finalizar Compra</button>
+      </section>
+    </main>
+    <div class="product-specs">
+      <ul class="tabs">
+              <!-- Contatos -->
+              <div class="col-lg-3 col-md-6">
+                <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Entre em Contato</h5>
+                <p class="mb-2">
+                  <i class="bi bi-geo text-primary me-2"></i>Rua 123, Recife, PE, Brasil
+                </p>
+                <p class="mb-2">
+                  <i class="bi bi-envelope-open text-primary me-2"></i>info@caomediapetshop.com
+                </p>
+                <p class="mb-0">
+                  <i class="bi bi-telephone text-primary me-2"></i>+99 99999999
+                </p>
+              </div>
+              <!-- Links Rápidos -->
+              <div class="col-lg-3 col-md-6">
+                <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Links Rápidos</h5>
+                <div class="d-flex flex-column justify-content-start">
+                  <a class="text-body mb-2" href="index.html">
+                    <i class="bi bi-arrow-right text-primary me-2"></i>Início </a>
+                  <a class="text-body mb-2" href="sobre.html">
+                    <i class="bi bi-arrow-right text-primary me-2"></i>Sobre Nós </a>
+                  <a class="text-body" href="contato.html">
+                    <i class="bi bi-arrow-right text-primary me-2"></i>Contato </a>
+                </div>
+              </div>
+           <!-- Redes Sociais -->
+    <div class="col-lg-3 col-md-6">
+      <div class="d-flex justify-content-end">
+        <a class="btn btn-outline-primary btn-square me-2" href="https://twitter.com/ZimRattu">
+          <i class="bi bi-twitter"></i>
+        </a>
+        <a class="btn btn-outline-primary btn-square me-2" href="https://github.com/rattzu">
+          <i class="bi bi-github"></i>
+        </a>
+        <a class="btn btn-outline-primary btn-square" href="https://instagram.com/alysu._">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+      </div>
+    </div>
+    <!-- Botão de Carrinho Fixo -->
+<a href="carrinho.html" class="btn btn-primary btn-lg btn-square fixed-cart">
+  <i class="bi bi-cart"></i>
+</a>
+      </body>
+    </html>
+      </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
+

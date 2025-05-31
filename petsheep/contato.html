@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <title>Cãomédia Pet Shop</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Ícone na aba do navegador -->
+    <link href="img/giaicon.jpg" rel="icon">
+    <!-- Fontes  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&amp;family=Roboto:wght@700&amp;display=swap" rel="stylesheet">
+    <!-- Ícones  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Barra superior de informações (PC) -->
+    <div class="container-fluid border-bottom d-none d-lg-block">
+      <div class="row gx-0">
+        <!-- Navegação  -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+          <!-- Logo com ícone  -->
+          <a href="index.html" class="navbar-brand ms-lg-5">
+            <h1 class="m-0 text-uppercase text-dark">
+              <i class="flaticon-dog fs-1 text-primary me-3"></i>Cãomédia Pet Shop
+            </h1>
+          </a>
+          <!-- Botão para menu mobile -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- menu -->
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+              <a href="index.html" class="nav-item nav-link active">Início</a>
+              <a href="contato.html" class="nav-item nav-link">Contato</a>
+              <a href="carrinho.php" class="nav-item nav-link">Produtos</a>
+              <a href="user.php" class="nav-item nav-link">Usuario</a>
+
+              <!-- Menu  -->
+              <div class="nav-item dropdown">
+                <div class="dropdown-menu m-0">
+                  <div class="dropdown-menu m-0"></div>
+                </div>
+              </div>
+              <!-- Botão de login destacado -->
+              <a href="login.php" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">Login <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <!-- Script do css -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Seção de contato  -->
+        <div class="container-fluid pt-5">
+          <div class="container">
+            <!-- Cabeçalho  -->
+            <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
+
+              <h1 class="display-5 text-uppercase mb-0">Sinta-se à Vontade para Nos Contatar</h1>
+            </div>
+            <!-- Conteúdo de contato  -->
+            <div class="row g-5">
+              <!-- Formulário de contato -->
+              <div class="col-lg-7">
+                <form>
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <input type="text" class="form-control bg-light border-0 px-4" placeholder="Seu Nome" style="height: 55px;">
+                    </div>
+                    <div class="col-12">
+                      <input type="email" class="form-control bg-light border-0 px-4" placeholder="Seu Email" style="height: 55px;">
+                    </div>
+                    <div class="col-12">
+                      <input type="text" class="form-control bg-light border-0 px-4" placeholder="Assunto" style="height: 55px;">
+                    </div>
+                    <div class="col-12">
+                      <textarea class="form-control bg-light border-0 px-4 py-3" rows="8" placeholder="Mensagem"></textarea>
+                    </div>
+                    <div class="col-12">
+                      <button class="btn btn-primary w-100 py-3" type="submit">Enviar Mensagem</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- Informações de contato -->
+              <div class="col-lg-5">
+                <div class="bg-light mb-5 p-5">
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-geo fs-1 text-primary me-3"></i>
+                    <div class="text-start">
+                      <h6 class="text-uppercase mb-1">Nosso Escritório</h6>
+                      <span>Rua 123, Recife, PE, Brasil</span>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center mb-2">
+                    <i class="bi bi-envelope-open fs-1 text-primary me-3"></i>
+                    <div class="text-start">
+                      <h6 class="text-uppercase mb-1">Envie-nos um Email</h6>
+                      <span>info@caomediapetshop.com</span>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center mb-4">
+                    <i class="bi bi-telephone fs-1 text-primary me-3"></i>
+                    <div class="text-start">
+                      <h6 class="text-uppercase mb-1">Ligue para Nós</h6>
+                      <span>+99 99999999</span>
+                    </div>
+                  </div>
+                  <!-- Maps -->
+                  <div>
+                    <iframe class="position-relative w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.375389036042!2d-34.881315684674!3d-8.063194194196307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab199f0b5b5f5f%3A0x5c5c5c5c5c5c5c5c!2sRecife%2C%20PE%2C%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1633024000000!5m2!1spt-BR!2sbr" frameborder="0" style="height: 205px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-specs">
+          <ul class="tabs">
+                  <!-- Contatos -->
+                  <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Entre em Contato</h5>
+                    <p class="mb-2">
+                      <i class="bi bi-geo text-primary me-2"></i>Rua 123, Recife, PE, Brasil
+                    </p>
+                    <p class="mb-2">
+                      <i class="bi bi-envelope-open text-primary me-2"></i>info@caomediapetshop.com
+                    </p>
+                    <p class="mb-0">
+                      <i class="bi bi-telephone text-primary me-2"></i>+99 99999999
+                    </p>
+                  </div>
+                  <!-- Links Rápidos -->
+                  <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Links Rápidos</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                      <a class="text-body mb-2" href="index.html">
+                        <i class="bi bi-arrow-right text-primary me-2"></i>Início </a>
+                      <a class="text-body" href="contato.html">
+                        <i class="bi bi-arrow-right text-primary me-2"></i>Contato </a>
+                    </div>
+                  </div>
+               <!-- Redes Sociais -->
+        <div class="col-lg-3 col-md-6">
+          <div class="d-flex justify-content-end">
+            <a class="btn btn-outline-primary btn-square me-2" href="https://twitter.com/ZimRattu">
+              <i class="bi bi-twitter"></i>
+            </a>
+            <a class="btn btn-outline-primary btn-square me-2" href="https://github.com/rattzu">
+              <i class="bi bi-github"></i>
+            </a>
+            <a class="btn btn-outline-primary btn-square" href="https://instagram.com/alysu._">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+          </div>
+        </div>
+          </body>
+        </html>
+          </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- Botão de Carrinho Fixo -->
+<a href="carrinho.php" class="btn btn-primary btn-lg btn-square fixed-cart">
+  <i class="bi bi-cart"></i>
+</a>
+    </body>
+  </html>
+        <!-- Scripts  -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Bibliotecas  -->
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <!-- Script principal -->
+        <script src="js/main.js"></script>
+  </body>
+</html>
