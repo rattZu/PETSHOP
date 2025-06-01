@@ -5,8 +5,9 @@
   --white: #ffffff;
   --red: #da8f20;
   --gray: #e0e0e0;
+  --gray-dark: #757575;
   --blue: #007bff;
-  --black: #212121;
+  --black: #000000;
 }
 
 /* Reset básico */
@@ -16,17 +17,10 @@
   box-sizing: border-box;
 }
 
-body, button, input, textarea {
-  font: 400 16px "Roboto", sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  cursor: pointer;
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--gray);
+  color: var(--black);
 }
 
 /* sobre.html */
@@ -256,14 +250,32 @@ hr {
   margin-top: 8px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column; /* Alinha o preço e o botão verticalmente */
+  align-items: center; /* Centraliza os itens */
+  flex-direction: column; /* Alinha o preço e o botão verticalmente */
 }
 
 .product-price {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   font-size: 18px;
+  color: var(--red);
+  margin-bottom: 10px; /* Espaço entre o preço e o botão */
+}
+
+.add-to-cart-button {
+  background: var(--red);
+  color: var(--white);
+  border: 2px solid var(--red);
+  border-radius: 6px;
+  padding: 6px 10px; /* Reduz o tamanho do botão */
+  font-weight: bold;
+  font-size: 14px; /* Reduz o tamanho da fonte */
+  transition: 0.3s;
+}
+
+.add-to-cart-button:hover {
+  background: transparent;
   color: var(--red);
 }
 
@@ -289,14 +301,14 @@ hr {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-  background-color: #f9f9f9;
+  background-color: var(--white);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .cart-table thead {
-  background-color: var(--blue);
+  background-color: var(--red);
   color: var(--white);
 }
 
@@ -338,14 +350,14 @@ hr {
   width: 50px;
   height: 36px;
   border-radius: 6px;
-  border: 1px solid var(--gray);
+  border: 1px solid var(--gray-dark);
   text-align: center;
   font-size: 14px;
 }
 
 .product-qtd-input:focus {
   outline: none;
-  border-color: var(--blue);
+  border-color: var(--red);
 }
 
 .remove-product-button {
@@ -370,8 +382,8 @@ hr {
   padding: 16px;
   font-size: 18px;
   font-weight: bold;
-  background-color: #f1f1f1;
-  border-top: 2px solid var(--gray);
+  background-color: var(--gray);
+  border-top: 2px solid var(--gray-dark);
 }
 
 .cart-total-container strong {
@@ -382,7 +394,7 @@ hr {
 .purchase-button {
   display: block;
   margin: 20px auto 0;
-  background-color: var(--blue);
+  background-color: var(--red);
   color: var(--white);
   border: none;
   border-radius: 6px;
@@ -395,37 +407,70 @@ hr {
 }
 
 .purchase-button:hover {
-  background-color: #0056b3;
+  background-color: #c82333;
 }
 
-/* Estilo para o endereço de entrega */
+/* Endereço */
 .address-container {
   margin-top: 20px;
   padding: 16px;
-  background-color: #f9f9f9;
+  background-color: var(--gray);
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.address-container label {
+.address-container .form-label {
   font-size: 16px;
   font-weight: bold;
   color: var(--black);
-  display: block;
   margin-bottom: 8px;
+  display: block;
 }
 
-.address-container input {
+.address-container .address-input {
   width: 100%;
   padding: 12px;
-  border: 1px solid var(--gray);
-  border-radius: 6px;
   font-size: 14px;
+  border: 1px solid var(--gray-dark);
+  border-radius: 6px;
+  outline: none;
 }
 
-.address-container input:focus {
-  outline: none;
-  border-color: var(--blue);
+.address-container .address-input:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 4px var(--red);
+}
+
+/* Botão de carrinho fixo no canto inferior direito */
+.fixed-cart {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px; /* Ajusta o tamanho do botão */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--red); /* Cor de fundo */
+  color: var(--white); /* Cor do ícone */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+.fixed-cart i {
+  font-size: 24px; /* Ajusta o tamanho do ícone */
+  transition: transform 0.3s ease; /* Transição suave para o ícone */
+}
+
+.fixed-cart:hover {
+  background-color: var(--blue); /* Cor de destaque ao passar o mouse */
+  transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
+}
+
+.fixed-cart:hover i {
+  transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
 }
 
 /* Responsividade */
@@ -516,10 +561,6 @@ hr {
   .purchase-button {
     width: 100%;
   }
-
-  .address-container input {
-    font-size: 12px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -535,7 +576,7 @@ hr {
   }
 
   .purchase-button {
-    font-size: 18px;
-    padding: 12px 16px;
+    font-size: 16px;
+    padding: 10px 16px;
   }
 }

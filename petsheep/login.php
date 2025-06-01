@@ -93,10 +93,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
           <a href="user.php" class="nav-item nav-link">Usuario</a>
           <div class="nav-item dropdown">
             <div class="dropdown-menu m-0">
-              <!-- Conteúdo do dropdown -->
+       
             </div>
           </div>
-          <a href="login.html" class="nav-item nav-link nav-contato.html bg-primary text-white px-5 ms-lg-5">Login <i class="bi bi-arrow-right"></i>
+          <a href="login.php" class="nav-item nav-link nav-contato.html bg-primary text-white px-5 ms-lg-5">Login <i class="bi bi-arrow-right"></i>
           </a>
         </div>
       </div>

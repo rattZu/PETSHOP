@@ -47,10 +47,13 @@
   
   .align-items-center {
     /* Centraliza o conteúdo vertical e horizontalmente */
-    display: flex;
-    align-items: center; /* Alinha verticalmente */
-    justify-content: center; /* Alinha horizontalmente */
+    display: flex; /* Ativa o layout flexível */
     text-align: center; /* Centraliza o texto */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    align-content: flex-end; /* Alinha o conteúdo ao final do container */
+  
+
   }
   
   .form-wrapper {
@@ -64,7 +67,7 @@
     padding: 1rem; /* Espaçamento interno */
     background-color: var(--white); /* Fundo branco */
     border-radius: 1.5rem; /* Bordas arredondadas */
-    width: 100%; /* Ocupa toda a largura disponível */
+    width: 80%; /* Ocupa toda a largura disponível */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35); /* Sombra */
     transform: scale(0); /* Inicialmente invisível */
     transition: 0.3s ease-in-out 0s; /* Transição suave */
@@ -140,6 +143,14 @@
   .container.sign-up .social-list.sign-up > div {
     /* Torna os formulários e botões sociais visíveis ao alternar entre "sign-in" e "sign-up" */
     transform: scale(1);
+  }
+  
+  .container.sign-in .form.sign-in {
+    transform: translateX(20%) translateY(-10%); /* Move a box de login mais para a direita e para cima */
+  }
+
+  .container.sign-up .form.sign-up {
+    transform: translateX(-20%) translateY(20%); /* Move a box de registro mais para a esquerda e para baixo */
   }
   
   .content-row {
@@ -363,4 +374,29 @@
     border-radius: 0;
     z-index: 99;
   }
-  
+
+  .form.sign-up {
+    /* Estilo do formulário de cadastro */
+    padding: 1.5rem; /* Reduz o espaçamento interno */
+    background-color: var(--white); /* Fundo branco */
+    border-radius: 1rem; /* Bordas arredondadas */
+    width: 100%; /* Reduz a largura */
+    max-width: 500px; /* Define uma largura máxima menor */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Sombra mais suave */
+    transform: scale(1); /* Torna visível */
+    margin-top: 2rem; /* Adiciona margem superior para mover para baixo */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transição suave */
+  }
+
+  .form.sign-in {
+    /* Estilo do formulário de login */
+    padding: 1.5rem; /* Espaçamento interno */
+    background-color: var(--white); /* Fundo branco */
+    border-radius: 1rem; /* Bordas arredondadas */
+    width: 100%; /* Largura total */
+    max-width: 500px; /* Define uma largura máxima */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Sombra suave */
+    transform: scale(1); /* Torna visível */
+    margin-top: -20rem; /* Move a box mais para cima */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transição suave */
+  }

@@ -565,14 +565,26 @@ header {
   z-index: 1000;
   border-radius: 50%;
   width: 60px;
-  height: 60px;
+  height: 60px; /* Ajusta o tamanho do botão */
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--red); /* Cor de fundo */
+  color: var(--white); /* Cor do ícone */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+.fixed-cart i {
+  font-size: 24px; /* Ajusta o tamanho do ícone */
+  transition: transform 0.3s ease; /* Transição suave para o ícone */
 }
 
 .fixed-cart:hover {
-  background-color: #ffd33c; /* Cor de destaque ao passar o mouse */
-  color: #212121;
+  background-color: var(--blue); /* Cor de destaque ao passar o mouse */
+  transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
+}
+
+.fixed-cart:hover i {
+  transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
 }
