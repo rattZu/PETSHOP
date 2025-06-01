@@ -245,6 +245,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Enviar pedido para o backend
     document.getElementById("finalizar-compra").addEventListener("click", () => {
+      // Verificar se o usuário está logado
+      const usuarioLogado = <?php echo isset($_SESSION['usuario_id']) ? 'true' : 'false'; ?>;
+
+      if (!usuarioLogado) {
+        alert("Você precisa estar logado para finalizar a compra.");
+        return;
+      }
+
       if (carrinho.length === 0) {
         alert("Carrinho vazio!");
         return;
@@ -270,17 +278,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ produtos: produtosEnvio, endereco: endereco })
       })
-      .then(res => res.text())
-      .then(res => {
-        alert("Pedido feito com sucesso!");
-        carrinho = [];
-        document.getElementById("endereco").value = ""; // Limpar campo de endereço
-        renderizarCarrinho();
-      })
-      .catch(err => {
-        alert("Erro ao enviar pedido.");
-        console.error(err);
-      });
+        .then(res => res.text())
+        .then(res => {
+          alert("Pedido feito com sucesso!");
+          carrinho = [];
+          document.getElementById("endereco").value = ""; // Limpar campo de endereço
+          renderizarCarrinho();
+        })
+        .catch(err => {
+          alert("Erro ao enviar pedido.");
+          console.error(err);
+        });
     });
 
     // Eventos para botões "Adicionar ao carrinho"
