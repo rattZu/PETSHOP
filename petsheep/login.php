@@ -88,7 +88,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
           <a href="index.html" class="nav-item nav-link active">Início</a>
-          <a href="contato.html" class="nav-item nav-link">Contato</a>
           <a href="produtos.html" class="nav-item nav-link">Produtos</a>
           <a href="user.php" class="nav-item nav-link">Usuario</a>
           <div class="nav-item dropdown">

@@ -73,7 +73,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <div class="navbar-nav ms-auto py-0">
         <a href="index.html" class="nav-item nav-link active">Início</a>
-        <a href="contato.html" class="nav-item nav-link">Contato</a>
         <a href="carrinho.php" class="nav-item nav-link">Produtos</a>
                   <a href="user.php" class="nav-item nav-link">Usuario</a>
 
@@ -331,8 +330,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <div class="d-flex flex-column justify-content-start">
               <a class="text-body mb-2" href="index.html">
                 <i class="bi bi-arrow-right text-primary me-2"></i>Início </a>
-              <a class="text-body" href="contato.html">
-                <i class="bi bi-arrow-right text-primary me-2"></i>Contato </a>
             </div>
           </div>
        <!-- Redes Sociais -->
