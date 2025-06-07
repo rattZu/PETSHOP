@@ -58,10 +58,7 @@ $conn->close();
    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
       <a href="index.html" class="navbar-brand ms-lg-5">
         <h1 class="m-0 text-uppercase text-dark">
-        </h1>
-      </a>
-        <h1 class="m-0 text-uppercase text-dark">
-          <i class="flaticon-dog fs-1 text-primary me-3"></i>😂👉🧠🔥
+          <i class="flaticon-dog fs-1 text-primary me-3"></i>Cãomédia Pet Shop
         </h1>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -71,15 +68,12 @@ $conn->close();
         <div class="navbar-nav ms-auto py-0">
           <a href="index.html" class="nav-item nav-link active">Início</a>
           <a href="carrinho.php" class="nav-item nav-link">Produtos</a>
-          <a href="user.php" class="nav-item nav-link">Usuario</a>
-          <div class="nav-item dropdown">
-            <div class="dropdown-menu m-0"></div>
-          </div>
-          <a href="login.php" class="nav-item nav-link nav-contato.html bg-primary text-white px-5 ms-lg-5">Login <i class="bi bi-arrow-right"></i>
-          </a>
+          <a href="user.php" class="nav-item nav-link">Usuário</a>
+          <a href="login.php" class="nav-item nav-link bg-primary text-white px-5 ms-lg-5">Login <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
     </nav>
+
   <div class="container mt-5">
     <div class="card">
       <div class="card-header bg-primary text-white">
@@ -90,8 +84,20 @@ $conn->close();
         <p><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></p>
         <!-- Botão de sair -->
         <form action="logout.php" method="post">
-    <button type="submit" class="btn btn-danger">Sair</button>
-</form>
+          <button type="submit" class="btn btn-danger">Sair</button>
+        </form>
+      </div>
+    </div>
 
+    <!-- Box para ir às compras -->
+    <div class="card mt-4">
+      <div class="card-body text-center">
+        <h4>Ir às compras</h4>
+        <p>Explore nossos produtos e aproveite as ofertas!</p>
+        <a href="carrinho.php" class="btn btn-primary">Ver os produtos</a>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
