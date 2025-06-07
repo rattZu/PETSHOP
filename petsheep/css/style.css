@@ -653,3 +653,16 @@ header {
 .fixed-cart:hover i {
   transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
 }
+
+footer {
+  background-color: #343a40; /* Cor do fundo */
+  color: #ffffff; /* Cor do texto */
+  padding: 20px 0; /* Reduz o espaçamento vertical */
+  margin-top: 30px; /* Ajusta a distância do conteúdo acima */
+  text-align: center; /* Centraliza o texto */
+}
+
+footer p {
+  margin-bottom: 0; /* Remove margem inferior */
+  font-size: 14px; /* Ajusta o tamanho da fonte */
+}

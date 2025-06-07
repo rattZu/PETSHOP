@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
     <a href="index.html" class="navbar-brand ms-lg-5">
       <h1 class="m-0 text-uppercase text-dark">
-        <i class="flaticon-dog fs-1 text-primary me-3"></i>Pet Shop
+        <i class="flaticon-dog fs-1 text-primary me-3"></i>CãoMédia Pet Shop
       </h1>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -132,7 +132,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Lista dos produtos disponíveis
     const produtos = [
       {
-        nome: "pedigree vital pro 10kg",
+        nome: "pedigree vital pro 10kg  Ração para Cães ", 
         preco: 165.00,
         img: "img/product-1.png"
       },
