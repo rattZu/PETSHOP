@@ -83,7 +83,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   <header class="hero-header">
     <div class="container py-5">
-      <h1 class="display-5 text-uppercase mb-0">Carrinho de Compras</h1>
     </div>
   </header>
 

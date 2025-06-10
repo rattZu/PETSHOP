@@ -46,15 +46,12 @@
   }
   
   .align-items-center {
-    /* Centraliza o conteúdo vertical e horizontalmente */
-    display: flex; /* Ativa o layout flexível */
-    text-align: center; /* Centraliza o texto */
-    flex-wrap: wrap; /* Permite que os itens quebrem linha */
-    justify-content: space-between; /* Distribui o espaço entre os itens */
-    align-content: flex-end; /* Alinha o conteúdo ao final do container */
-  
-
-  }
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-end;
+}
   
   .form-wrapper {
     /* Define o tamanho máximo do formulário */
@@ -380,12 +377,13 @@
     padding: 1.5rem; /* Reduz o espaçamento interno */
     background-color: var(--white); /* Fundo branco */
     border-radius: 1rem; /* Bordas arredondadas */
-    width: 100%; /* Reduz a largura */
-    max-width: 500px; /* Define uma largura máxima menor */
+    width: 700px; /* Reduz a largura */
+    max-width: 550px; /* Define uma largura máxima menor */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Sombra mais suave */
     transform: scale(1); /* Torna visível */
-    margin-top: 2rem; /* Adiciona margem superior para mover para baixo */
+    margin-top: -6rem; /* Adiciona margem superior para mover para baixo */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transição suave */
+
   }
 
   .form.sign-in {

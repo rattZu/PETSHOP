@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
           <a href="index.html" class="nav-item nav-link active">Início</a>
-          <a href="produtos.html" class="nav-item nav-link">Produtos</a>
+          <a href="carrinho.php" class="nav-item nav-link">Produtos</a>
           <a href="user.php" class="nav-item nav-link">Usuario</a>
           <div class="nav-item dropdown">
             <div class="dropdown-menu m-0">
@@ -156,7 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
             <b onclick="toggle()" class="pointer">Inscreva-se aqui</b>
         </p>
     </form>
-</div>
+  </div>
 
               </p>
             </div>
@@ -164,18 +164,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
         </div>
       </div>
       <div class="row content-row">
-        <!-- Coluna para o conteúdo de boas-vindas -->
-        <div class="col align-items-center flex-col">
-          <div class="text sign-in">
-            <p style="margin-left: 1px; padding-top: -100px; font-size: 50px;">Bem Vindo! <br>Ao Cãomédia Pet Shop </p>
-          </div>
-          <div class="img sign-in">
-            <!-- Imagem de boas-vindas -->
-          </div>
-        </div>
-        <!-- Coluna para o conteúdo de inscrição -->
-        <div class="col align-items-center flex-col">
-          <div class="img sign-up">
+       
             <!-- Imagem de inscrição -->
           </div>
           <div class="text sign-up">
