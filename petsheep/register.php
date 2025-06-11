@@ -1,5 +1,7 @@
 <?php
-if (isset($_POST['submit'])) {
+session_start(); // Inicia a sessão
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
     // Conexão com o banco de dados
     $dbhost = 'localhost';
     $dbuser = 'root';
@@ -9,61 +11,25 @@ if (isset($_POST['submit'])) {
 
     // Verifica se a conexão foi bem-sucedida
     if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+        die("Erro na conexão: " . $conn->connect_error);
     }
 
     // Obtém os dados do formulário
-    $usuario = trim($_POST['usuario']);
-    $email = trim($_POST['email']);
-    $senha = $_POST['senha'];
-    $confirmar_senha = $_POST['confirmar_senha'];
-
-    // Verifica se os campos estão preenchidos
-    if (empty($usuario) || empty($email) || empty($senha) || empty($confirmar_senha)) {
-        echo "Todos os campos são obrigatórios.";
-        exit;
-    }
-
-    // Verifica se as senhas coincidem
-    if ($senha !== $confirmar_senha) {
-        echo "As senhas não coincidem.";
-        exit;
-    }
-
-    // Criptografa a senha
-    $senha_hash = password_hash($senha, PASSWORD_BCRYPT);
-
-    // Verifica se o usuário ou e-mail já existe
-    $sql_check = "SELECT * FROM usuarios WHERE usuario = ? OR email = ?";
-    $stmt_check = $conn->prepare($sql_check);
-    $stmt_check->bind_param("ss", $usuario, $email);
-    $stmt_check->execute();
-    $result_check = $stmt_check->get_result();
-
-    if ($result_check->num_rows > 0) {
-        echo "Usuário ou e-mail já cadastrado.";
-        $stmt_check->close();
-        $conn->close();
-        exit;
-    }
-    $stmt_check->close();
+    $usuario = $conn->real_escape_string($_POST['usuario']);
+    $email = $conn->real_escape_string($_POST['email']);
+    $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT); // Criptografa a senha
 
     // Insere os dados no banco de dados
-    $sql = "INSERT INTO usuarios (usuario, email, senha) VALUES (?, ?, ?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sss", $usuario, $email, $senha_hash);
-
-    if ($stmt->execute()) {
-        echo "Conta criada com sucesso!";
-        // Redireciona para a página de login
-        header("Location: index.html");
-        exit;
+    $sql = "INSERT INTO usuarios (usuario, email, senha) VALUES ('$usuario', '$email', '$senha')";
+    if ($conn->query($sql) === TRUE) {
+        // Redireciona para a página de login após o registro bem-sucedido
+        header("Location: login.php");
+        exit();
     } else {
-        echo "Erro ao criar conta: " . $stmt->error;
+        echo "Erro ao criar conta: " . $conn->error;
     }
 
     // Fecha a conexão com o banco de dados
-    $stmt->close();
     $conn->close();
 }
 ?>
